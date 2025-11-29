@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.Allreels .reels {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.Allreels .reels img#reel {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Allreels .reels::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  z-index: 1;
+}
+.Allreels .reels .bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  z-index: 5;
+  color: white;
+}
+.Allreels .reels .bottom .details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Allreels .reels .bottom .details #profile, .Allreels .reels .bottom .details img {
+  width: 33px;
+  height: 30px;
+  border-radius: 50%;
+}
+.Allreels .reels .bottom .details h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.Allreels .reels .bottom .details button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 4px 10px;
+  font-size: 15px;
+  border-radius: 2px;
+  color: white;
+}
+.Allreels .reels .bottom h4 {
+  margin-top: 5px;
+  font-size: 17px;
+}
+.Allreels .reels .right {
+  position: absolute;
+  right: 15px;
+  bottom: 100px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  font-size: 30px;
+  text-shadow: 0px 0px 5px black;
+  color: white;
+}
+.Allreels .reels .right i {
+  pointer-events: none;
+  transition: 0.2s;
+}
+.Allreels .reels .right i:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 5px white);
+}
+.Allreels .reels .right .like i.ri-heart-fill {
+  color: red;
+}
+.Allreels .reels .right .like,
+.Allreels .reels .right .dislike,
+.Allreels .reels .right .Comment,
+.Allreels .reels .right .Share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.Allreels .reels .right .like h4,
+.Allreels .reels .right .dislike h4,
+.Allreels .reels .right .Comment h4,
+.Allreels .reels .right .Share h4 {
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
