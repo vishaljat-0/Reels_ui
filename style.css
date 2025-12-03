@@ -18,10 +18,16 @@ main {
 
 section {
   height: 100vh;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: auto;
   scroll-snap-align: start;
   position: relative;
+}
+@media (max-width: 400px) {
+  section {
+    max-width: 100%;
+  }
 }
 
 /* BIG HEART ANIMATION */
@@ -43,7 +49,7 @@ section {
 
 .dbl-heart i {
   color: #ff216e;
-  font-size: 110px;
+  font-size: clamp(80px, 15vw, 110px);
   animation: popHeart 0.6s ease-out forwards;
 }
 
@@ -81,47 +87,50 @@ section {
 }
 .Allreels .reels .bottom {
   position: absolute;
-  bottom: 20px;
-  left: 10px;
+  bottom: clamp(15px, 3vh, 20px);
+  left: clamp(8px, 2vw, 10px);
   z-index: 5;
   color: white;
+  padding-right: clamp(8px, 2vw, 10px);
 }
 .Allreels .reels .bottom .details {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(8px, 2vw, 10px);
 }
 .Allreels .reels .bottom .details #profile, .Allreels .reels .bottom .details img {
-  width: 33px;
-  height: 30px;
+  width: clamp(28px, 5vw, 33px);
+  height: clamp(25px, 5vw, 30px);
   border-radius: 50%;
+  flex-shrink: 0;
 }
 .Allreels .reels .bottom .details h3 {
-  font-size: 20px;
+  font-size: clamp(16px, 3.5vw, 20px);
   font-weight: 500;
 }
 .Allreels .reels .bottom .details button {
   background-color: transparent;
   border: 1px solid white;
-  padding: 4px 10px;
-  font-size: 15px;
+  padding: clamp(3px, 0.8vw, 4px) clamp(8px, 2vw, 10px);
+  font-size: clamp(13px, 2.8vw, 15px);
   border-radius: 2px;
   color: white;
+  flex-shrink: 0;
 }
 .Allreels .reels .bottom h4 {
-  margin-top: 5px;
-  font-size: 17px;
+  margin-top: clamp(4px, 1vh, 5px);
+  font-size: clamp(14px, 3vw, 17px);
 }
 .Allreels .reels .right {
   position: absolute;
-  right: 15px;
-  bottom: 100px;
+  right: clamp(10px, 3vw, 15px);
+  bottom: clamp(80px, 15vh, 100px);
   z-index: 5;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: clamp(14px, 3vh, 18px);
   align-items: center;
-  font-size: 30px;
+  font-size: clamp(24px, 5vw, 30px);
   text-shadow: 0px 0px 5px black;
   color: white;
 }
@@ -143,11 +152,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: clamp(2px, 0.5vh, 3px);
 }
 .Allreels .reels .right .like h4,
 .Allreels .reels .right .dislike h4,
 .Allreels .reels .right .Comment h4,
 .Allreels .reels .right .Share h4 {
-  font-size: 14px;
+  font-size: clamp(12px, 2.5vw, 14px);
 }/*# sourceMappingURL=style.css.map */

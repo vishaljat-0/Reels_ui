@@ -198,6 +198,8 @@ adddata();
 //  UPDATE ONLY ONE REEL 
 function updateSingleReel(id) {
   let reel = document.querySelector(`.reels[id="${id}"]`);
+  console.log(reel);
+  
   if (!reel) return;
 
   let likeBox = reel.querySelector(".like");
