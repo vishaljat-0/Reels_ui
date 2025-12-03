@@ -153,7 +153,7 @@ let adddata = () => {
     sum += `
       <section>
         <div class="reels" id=${id}>
-          <video id="reel" src=${e.video} muted playsinline></video>
+          <video id="reel" src=${e.video} loop autoplay  muted playsinline></video>
 
           <div class="bottom">
             <div class="details">
